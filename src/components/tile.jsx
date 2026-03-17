@@ -13,14 +13,18 @@ const data = [
     src: image2,
   },
 ];
+
 const Tile = () => {
   return (
-    <div className="flex justify-evenly relative w-full">
+    <div className="flex flex-col md:flex-row justify-evenly gap-4 w-full px-4">
       {data.map((item, index) => (
-        <div key={index} className="flex bg-[#f4f4f4] rounded-lg">
-          <div className="flex px-5 flex-col justify-center">
+        <div
+          key={index}
+          className="flex bg-[#f4f4f4] rounded-lg w-full md:w-[48%]"
+        >
+          <div className="flex px-5 py-6 flex-col justify-center flex-1">
             <h2 className="text-xl text-left font-medium">{item.header}</h2>
-            <p className="text-sm w-75">{item.text}</p>
+            <p className="text-sm mt-2">{item.text}</p>
             <button className="rounded px-8 mt-6 bg-white py-2 w-fit text-xs">
               Learn More
             </button>
@@ -28,7 +32,7 @@ const Tile = () => {
           <img
             src={item.src}
             alt=""
-            className="w-62.5 flex-1 rounded-r-lg h-50"
+            className="w-40 md:w-52 object-cover rounded-r-lg"
           />
         </div>
       ))}
