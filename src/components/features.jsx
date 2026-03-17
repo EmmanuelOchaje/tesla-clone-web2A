@@ -4,6 +4,8 @@ import model3 from "../../public/assets/feature2.jpg";
 import modelz from "../../public/assets/feature3.jpg";
 import modely from "../../public/assets/feature4.jpg";
 import modelt from "../../public/assets/feature5.jpg";
+import left from "../../public/assets/left.png";
+import right from "../../public/assets/right.png";
 
 const vehicles = [
   {
@@ -37,7 +39,7 @@ export default function Features() {
 
   return (
     <section className="bg-white py-8 overflow-hidden">
-      {/* Slider track */}
+      {/* Slide */}
       <div className="relative">
         <div
           className="flex transition-transform duration-500 ease-in-out"
@@ -48,15 +50,14 @@ export default function Features() {
               key={v.title}
               className="min-w-[65%] mx-3 rounded-xl px-1 relative h-110 overflow-hidden"
             >
-              {/* Background image */}
+              {/* img*/}
               <img
                 src={v.img}
                 alt={v.title}
                 className="absolute inset-0 w-full h-full object-cover"
               />
 
-              {/* Category badge - top left */}
-              {/* Bottom content */}
+              {/* Bottom */}
               <div className="absolute bottom-0 left-0 right-0 z-10 px-5 pb-5 pt-20 bg-linear-to-t from-black/60 via-black/20 to-transparent">
                 <h3 className="text-white text-[32px] mb-4 font-semibold leading-tight">
                   {v.title}
@@ -74,43 +75,25 @@ export default function Features() {
           ))}
         </div>
 
-        {/* Right arrow */}
+        {/* Right */}
         {current < maxIndex && (
           <button
             onClick={next}
-            className="absolute right-3 top-1/2 -translate-y-1/2 z-20 bg-white hover:bg-gray-100 border border-[#e0e0e0] rounded-full w-10 h-10 flex items-center justify-center shadow-md transition-all"
+            className="absolute cursor-pointer right-3 top-1/2 -translate-y-1/2 z-20 bg-white rounded w-10 h-10 flex items-center justify-center"
             aria-label="Next"
           >
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#171a20"
-              strokeWidth="2"
-            >
-              <polyline points="9 18 15 12 9 6" />
-            </svg>
+            <img src={right} alt="" className="w-6 h-6" />
           </button>
         )}
 
-        {/* Left arrow */}
+        {/* Left */}
         {current > 0 && (
           <button
             onClick={prev}
-            className="absolute left-3 top-1/2 -translate-y-1/2 z-20 bg-white hover:bg-gray-100 border border-[#e0e0e0] rounded-full w-10 h-10 flex items-center justify-center shadow-md transition-all"
+            className="absolute cursor-pointer left-3 top-1/2 -translate-y-1/2 z-20 bg-white rounded w-10 h-10 flex items-center justify-center"
             aria-label="Previous"
           >
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#171a20"
-              strokeWidth="2"
-            >
-              <polyline points="15 18 9 12 15 6" />
-            </svg>
+            <img src={left} alt="" className="w-6 h-6" />
           </button>
         )}
       </div>
@@ -121,7 +104,7 @@ export default function Features() {
           <button
             key={i}
             onClick={() => setCurrent(i)}
-            className={`w-2 h-2 rounded-full transition-all duration-300 ${
+            className={`w-2 h-2 rounded transition-all duration-300 ${
               i === current ? "bg-[#171a20]" : "bg-[#171a20]/30"
             }`}
           />

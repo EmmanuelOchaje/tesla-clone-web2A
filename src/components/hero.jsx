@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import model1 from "../../public/assets/model3.jpg";
 import model3 from "../../public/assets/model-x.jpg";
 import model4 from "../../public/assets/model-y.jpg";
+import left from "../../public/assets/left.png";
+import right from "../../public/assets/right.png";
 
 const slides = [
   {
@@ -101,35 +103,17 @@ export default function Hero() {
       {/* Arrow buttons */}
       <button
         onClick={prev}
-        className="absolute left-20 top-1/2 -translate-y-1/2 z-10 bg-white rounded p-2 transition-all"
+        className="absolute cursor-pointer left-2 md:left-20 top-1/2 -translate-y-1/2 z-10 bg-white rounded p-2"
         aria-label="Previous"
       >
-        <svg
-          width="18"
-          height="18"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="black"
-          strokeWidth="2"
-        >
-          <polyline points="15 18 9 12 15 6" />
-        </svg>
+        <img src={left} alt="" className="w-4 h-4" />
       </button>
       <button
         onClick={next}
-        className="absolute right-20 top-1/2 -translate-y-1/2 z-10 bg-white rounded p-2 transition-all"
+        className="absolute cursor-pointer right-2 md:left-20 top-1/2 -translate-y-1/2 z-10 bg-white rounded p-2"
         aria-label="Next"
       >
-        <svg
-          width="18"
-          height="18"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="black"
-          strokeWidth="2"
-        >
-          <polyline points="9 18 15 12 9 6" />
-        </svg>
+        <img src={right} alt="" className="w-4 h-4" />
       </button>
     </section>
   );

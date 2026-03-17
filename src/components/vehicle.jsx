@@ -4,6 +4,8 @@ import model3 from "../../public/assets/models.jpg";
 import modelz from "../../public/assets/modelz.jpg";
 import modely from "../../public/assets/modely.jpg";
 import modelt from "../../public/assets/modelt.jpg";
+import left from "../../public/assets/left.png";
+import right from "../../public/assets/right.png";
 
 const vehicles = [
   { title: "Model 3", category: "Sport Sedan", img: model3 },
@@ -77,38 +79,20 @@ export default function VehicleSlider() {
         {current < maxIndex && (
           <button
             onClick={next}
-            className="absolute right-3 top-1/2 -translate-y-1/2 z-20 bg-white hover:bg-gray-100 border border-[#e0e0e0] rounded-full w-10 h-10 flex items-center justify-center shadow-md transition-all"
+            className="absolute cursor-pointer right-3 top-1/2 -translate-y-1/2 z-20 bg-white  rounded w-10 h-10 flex items-center justify-center"
             aria-label="Next"
           >
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#171a20"
-              strokeWidth="2"
-            >
-              <polyline points="9 18 15 12 9 6" />
-            </svg>
+            <img src={right} alt="" className="w-6 h-6" />
           </button>
         )}
 
         {current > 0 && (
           <button
             onClick={prev}
-            className="absolute left-3 top-1/2 -translate-y-1/2 z-20 bg-white hover:bg-gray-100 border border-[#e0e0e0] rounded-full w-10 h-10 flex items-center justify-center shadow-md transition-all"
+            className="absolute cursor-pointer left-3 top-1/2 -translate-y-1/2 z-20 bg-white rounded w-10 h-10 flex items-center justify-center"
             aria-label="Previous"
           >
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#171a20"
-              strokeWidth="2"
-            >
-              <polyline points="15 18 9 12 15 6" />
-            </svg>
+            <img src={left} alt="" className="w-6 h-6" />
           </button>
         )}
       </div>
