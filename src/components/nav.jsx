@@ -7,7 +7,6 @@ import question from "../../public/assets/question.png";
 const navLinks = ["Vehicles", "Energy", "Charging", "Discover", "Shop"];
 
 export default function Navbar() {
-  // const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (

@@ -28,7 +28,6 @@ const slides = [
 
 export default function Hero() {
   const [current, setCurrent] = useState(0);
-  // const maxIndex = vehicles.length - 2;
 
   useEffect(() => {
     const timer = setInterval(
@@ -53,10 +52,9 @@ export default function Hero() {
         style={{ animation: "fadeSlide 0.7s ease forwards" }}
       />
 
-      {/* Subtle gradient overlay - darkens top and bottom only */}
       <div className="absolute inset-0 bg-linear-to-b from-black/20 via-transparent to-black/30" />
 
-      {/* Title - top center */}
+      {/* Title */}
       <div className="absolute top-20 left-0 right-0 text-center z-10 px-4">
         <h1 className="text-xl font md:text-4xl font-semibold text-white leading-tight">
           {slide.title}
@@ -83,9 +81,8 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Buttons + dots - bottom center */}
+      {/* Buttons  */}
       <div className="absolute bottom-10 left-0 right-0 flex flex-col items-center gap-4 z-10 px-4">
-        {/* Dots */}
         {/* Dots */}
         <div className="flex justify-center gap-2 mt-4">
           {slides.map((_, i) => (
@@ -100,7 +97,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Arrow buttons */}
+      {/* Arrows */}
       <button
         onClick={prev}
         className="absolute cursor-pointer left-2 md:left-20 top-1/2 -translate-y-1/2 z-10 bg-white rounded p-2"

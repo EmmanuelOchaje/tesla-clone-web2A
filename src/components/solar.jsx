@@ -39,7 +39,7 @@ export default function Solar() {
 
   return (
     <section className="bg-white py-8 overflow-hidden">
-      {/* Slider track */}
+      {/* Slider */}
       <div className="relative">
         <div
           className="flex transition-transform duration-500 ease-in-out"
@@ -50,15 +50,15 @@ export default function Solar() {
               key={v.title}
               className="min-w-[65%] mx-3 rounded-xl px-1 relative h-110 overflow-hidden"
             >
-              {/* Background image */}
+              {/* image */}
               <img
                 src={v.img}
                 alt={v.title}
                 className="absolute inset-0 w-full h-full object-cover"
               />
 
-              {/* Category badge - top left */}
-              {/* Bottom content */}
+              {/* Category */}
+              {/* Bottom */}
               <div className="absolute bottom-0 left-0 right-0 z-10 px-5 pb-5 pt-20 bg-linear-to-t from-black/60 via-black/20 to-transparent">
                 <h3 className="text-white text-[32px] mb-4 font-semibold leading-tight">
                   {v.title}
@@ -76,7 +76,7 @@ export default function Solar() {
           ))}
         </div>
 
-        {/* Right arrow */}
+        {/* Right */}
         {current < maxIndex && (
           <button
             onClick={next}
@@ -87,7 +87,7 @@ export default function Solar() {
           </button>
         )}
 
-        {/* Left arrow */}
+        {/* Left */}
         {current > 0 && (
           <button
             onClick={prev}
